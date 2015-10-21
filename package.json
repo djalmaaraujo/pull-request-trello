@@ -1,0 +1,22 @@
+{
+  "name": "prtrello",
+  "version": "0.0.7",
+  "description": "Creates a github Pull Request with the trello Card/Task Information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "prtrello": "index.js"
+  },
+  "author": "Djalma Araujo",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^0.6.2",
+    "commander": "^2.3.0",
+    "sync-exec": "^0.6.1",
+    "open": "0.0.5",
+    "prompt": "^0.2.13",
+    "request": "^2.40.0"
+  }
+}
