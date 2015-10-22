@@ -136,6 +136,7 @@ var Github = {
         'User-Agent': 'prtrello App'
       }
     }, function (error, response, body) {
+      console.log(error, body);
       if (error) {
         console.log(error.error);
         process.exit();
@@ -147,7 +148,7 @@ var Github = {
       }
 
       if (body.message == 'Validation Failed') {
-        console.log('Looks like your branch it is not pushed. Push your branch before opening the PR'.error);
+        console.log('Check for an existing PR for this branch. Also, make sure to Push your branch before opening the PR'.error);
         process.exit();
       }
 
