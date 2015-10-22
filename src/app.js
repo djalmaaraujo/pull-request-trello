@@ -14,9 +14,9 @@ module.exports = {
               console.log('[Github]'.green + ': '.white + ' Opening Pull Request...'.warn);
 
               github.openPR(pullRequest, function (info) {
-                console.log('#####################################################################'.help);
-                console.log('Pull Request Sent:' + info.html_url.green + ' shipit! :D'.silly)
-                console.log('#####################################################################'.help);
+                console.log('#############################################################################'.help);
+                console.log('PR Opened (' + info.html_url.green + ') ' + ' shipit! :D'.silly)
+                console.log('#############################################################################'.help);
 
                 open(info.html_url);
               });
