@@ -16,9 +16,12 @@ npm install -g prtrello
 ## Configuration
 Run  ```prtrello``` for the first time and you will be requested to setup your Github credentials and Trello Token.
 
-
 ## About Trello Token
 Since trello uses OAuth to authenticate, the tool can't get a fresh token automatically. With that in mind, you need to access ```https://trello.com/1/authorize?key=31bf1b83dbdaeb38fe6a7b29ef9132de&name=prtrello&expiration=never&response_type=token``` to get a new token. This token has no expiration date.
+
+## About Github Personal Access Token
+You will need to use a personal access token from github. You can generate one in this page here [https://github.com/settings/tokens](https://github.com/settings/tokens)
+![image](https://www.dropbox.com/s/bi7062glusx7lz3/Screenshot%202015-10-22%2009.39.54.png?dl=0)
 
 ## How the PR looks like:
 Title: [#shortTaskId] The title of the card
