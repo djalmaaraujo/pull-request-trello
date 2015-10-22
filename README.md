@@ -21,7 +21,7 @@ Since trello uses OAuth to authenticate, the tool can't get a fresh token automa
 
 ## About Github Personal Access Token
 You will need to use a personal access token from github. You can generate one in this page here [https://github.com/settings/tokens](https://github.com/settings/tokens)
-![image](https://www.dropbox.com/s/bi7062glusx7lz3/Screenshot%202015-10-22%2009.39.54.png?dl=0)
+![image](https://raw.githubusercontent.com/djalmaaraujo/pull-request-trello/master/screenshot-gh.png)
 
 ## How the PR looks like:
 Title: [#shortTaskId] The title of the card
@@ -29,7 +29,7 @@ Description: the shortlink of the task
 
 Ex:
 
-![image](https://raw.githubusercontent.com/cconsultants/pull-request-trello/master/screenshot.png)
+![image](https://raw.githubusercontent.com/djalmaaraujo/pull-request-trello/master/screenshot.png)
 
 ## Usage
 After your setup, the next time you use the tool you will receive these questions:
