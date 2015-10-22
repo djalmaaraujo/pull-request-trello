@@ -5,10 +5,10 @@ var config = require('./config');
 var open   = require('open');
 
 module.exports = {
-  start: function () {
+  start: function (taskID) {
     github.credentials(function () {
       trello.credentials(function () {
-        trello.askID(function (taskID) {
+        trello.askID(taskID, function (taskID) {
           trello.getCardInfo(taskID, function (card) {
             github.confirmPRDetails(card, function (pullRequest) {
               console.log('[Github]'.green + ': '.white + ' Opening Pull Request...'.warn);

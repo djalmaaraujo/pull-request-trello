@@ -32,7 +32,11 @@ module.exports = {
     });
   },
 
-  askID: function (cb) {
+  askID: function (taskID, cb) {
+    if (taskID !== undefined) {
+      return cb(taskID);
+    }
+
     var tempID     = config.readConfig().temp.taskId;
     var tempIDText = "[" + tempID + "]";
 

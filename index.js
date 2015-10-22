@@ -18,19 +18,11 @@ colors.setTheme({
 });
 
 program
-  .version('0.0.1')
+  .version('1.0.2')
   .option('-r, --reset', 'reset credentials', app.reset)
-
-program.on('--help', function(){
-  console.log('  Github PR for Trello Cards');
-  console.log('');
-  console.log('    $ prtrello # This will start the commit');
-  console.log('    The tool will ask for:');
-  console.log('       1. Github Repository: woboinc/hpb');
-  console.log('       2. Trello Card ID: FcRlVtLv');
-  console.log('       3. Trello Card Title: Get the default from the card');
-  console.log('');
-});
+  .option('-t, --task [value]', 'pass the task', function (taskId) {
+    app.start(taskId);
+  });
 
 if (process.argv.length == 2) {
   app.start();
