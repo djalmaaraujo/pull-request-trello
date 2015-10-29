@@ -136,7 +136,6 @@ var Github = {
         'User-Agent': 'prtrello App'
       }
     }, function (error, response, body) {
-      console.log(error, body);
       if (error) {
         console.log(error.error);
         process.exit();
