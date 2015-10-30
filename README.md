@@ -10,7 +10,7 @@ Create a Pull Request Using Trello Card Information Automatically
 
 ## Install
 ```bash
-npm install -g prtrello
+[sudo] npm install -g prtrello
 ```
 
 ## Configuration
