@@ -8,7 +8,7 @@ module.exports = {
     if (credentials.trello.token) { return cb(); }
 
     console.log(" To setup your trello credentials you need to generate a TOKEN. \n".warn);
-    console.log("   1. Go to https://trello.com/1/authorize?key=" + credentials.appKey + "&name=prtrello&expiration=never&response_type=token \n".warn);
+    console.log("   1. Go to https://trello.com/1/authorize?key=" + credentials.appKey + "&name=prtrello&expiration=never&response_type=token&scope=read,write \n".warn);
 
     prompt.start();
 
@@ -79,6 +79,26 @@ module.exports = {
 
       } else if (response.statusCode == 400) {
         console.log("This task id is invalid, exiting.. \n".error);
+        process.exit();
+      }
+
+      cb(body);
+    });
+  },
+
+  postcomment: function (taskID, url, cb) {
+    credentials = config.readConfig();
+    console.log('#############################################################################'.help);
+    console.log("[Trello]".verbose + " Adding Pull Request url to the card...".warn);
+
+    request({
+      url: "https://api.trello.com/1/cards/" + taskID + "/actions/comments?key=" + credentials.appKey + "&token=" + credentials.trello.token + " \n",
+      body: {text: url},
+      method: "POST",
+      json: true
+    }, function (error, response, body) {
+      if (error) {
+        console.log(error.error);
         process.exit();
       }
 
