@@ -16,9 +16,12 @@ module.exports = {
               github.openPR(pullRequest, function (info) {
                 console.log('#############################################################################'.help);
                 console.log('PR Opened (' + info.html_url.green + ') ' + ' shipit! :D'.silly)
-                console.log('#############################################################################'.help);
 
-                open(info.html_url);
+                trello.postcomment(taskID, info.html_url, function () {
+                  console.log('Done.'.green);
+                  console.log('https://trello.com/c/' + taskID + '/'.green);
+                  console.log('#############################################################################'.help);
+                });
               });
             });
           });
