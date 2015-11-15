@@ -84,5 +84,25 @@ module.exports = {
 
       cb(body);
     });
+  },
+
+  postcomment: function (taskID, url, cb) {
+    credentials = config.readConfig();
+    console.log('#############################################################################'.help);
+    console.log("[Trello]".verbose + " Adding Pull Request url to the card...".warn);
+
+    request({
+      url: "https://api.trello.com/1/cards/" + taskID + "/actions/comments" + " \n",
+      formData: {text: url},
+      method: "POST",
+      json: true
+    }, function (error, response, body) {
+      if (error) {
+        console.log(error.error);
+        process.exit();
+      }
+
+      cb(body);
+    });
   }
 };
