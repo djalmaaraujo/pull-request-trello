@@ -34,22 +34,27 @@ Ex:
 ## Usage
 After your setup, the next time you use the tool you will receive these questions:
 ```
-What is the task ID?: [123456]:
-Getting trello card information...
-[Github]: Enter the repository name: [woboinc/hpb]:
-[Github]: Enter the title or use this: [#74zySCLD] [BUG] Shipping prices should not be displayed with 'est.' on Review & Confirm step of Checkout:
-[Github]: Enter the description or use this: https://trello.com/c/74zySCLD:
+[Github]: Enter the repository name: [djalmaaraujo/pull-request-trello]:
+[Github]: Enter the title or use this: [#3whHnQaF] PR trello test card:
+[Github]: Enter the description or use this: https://trello.com/c/3whHnQaF:
 [Github]: Do you have any extra comments? Leave blank for nothing:
-[Github]: Enter the branch name of your task: [djalma/test]:
+[Github]: Enter the branch name of your task: [new-trello-id]:
 [Github]: This pull-request should be merge into: [master]:
-[Github]: Opening Pull Request...
+[Github]:  Opening Pull Request...
+#############################################################################
+PR Opened (https://github.com/djalmaaraujo/pull-request-trello/pull/7)  shipit! :D
+#############################################################################
+#############################################################################
+[Trello] Adding Pull Request url to the card...
+https://trello.com/c/3whHnQaF/
+Done.
+#############################################################################
 
-#####################################################################
-Pull Request Sent:https://github.com/woboinc/hpb/pull/291 shipit! :D
-#####################################################################
-
-At this time, your default browser will open a new window with the pull-request URL.
+At this time, your pull-request is open and the PR url is posted on your trello task.
 ```
+
+## Shortcut
+You can use ```prtrello -t taskID``` to skip the task question.
 
 ## License
 [MIT License](http://djalmaaraujo.mit-license.org)
