@@ -1,5 +1,4 @@
 # Pull Request For Trello
-=========================
 
 [![NPM version](http://img.shields.io/npm/v/prtrello.svg?style=flat)](http://npmjs.org/prtrello)
 [![NPM downloads](http://img.shields.io/npm/dm/prtrello.svg?style=flat)](http://npmjs.org/prtrello)
