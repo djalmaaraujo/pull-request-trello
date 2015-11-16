@@ -15,6 +15,8 @@ Create a Pull Request Using Trello Card Information Automatically
 ## Configuration
 Run  ```prtrello``` for the first time and you will be requested to setup your Github credentials and Trello Token.
 
+**Important:** If you have the version ```1.0.3``` or earlier, please remove your ~/prtrello.json file and install prtrello again. The new version needs a ```WRITE``` permission on trello and because of that you need to re-install your credentials.
+
 ## About Trello Token
 Since trello uses OAuth to authenticate, the tool can't get a fresh token automatically. With that in mind, you need to access [https://trello.com/1/authorize?key=31bf1b83dbdaeb38fe6a7b29ef9132de&name=prtrello&expiration=never&response_type=token&scope=read,write](https://trello.com/1/authorize?key=31bf1b83dbdaeb38fe6a7b29ef9132de&name=prtrello&expiration=never&response_type=token&scope=read,write) to get a new token. This token has no expiration date.
 
